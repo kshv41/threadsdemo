@@ -58,9 +58,7 @@ Array* addArrays(Array * array1, Array *array2){
 		myInsturctions[i].finish = myInsturctions[i].start + (ARR_SIZE/NUM_THREADS); 
 
 	}
-
-
-
+	
 	pthread_t myThread[NUM_THREADS];
 	for(int i =0; i< NUM_THREADS; i++)
 		pthread_create(&myThread[i], NULL, runner, &myInsturctions[i]);
